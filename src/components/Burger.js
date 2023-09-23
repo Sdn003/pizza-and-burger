@@ -15,7 +15,7 @@ function Burger() {
       setProducts(context.data[1].subItemsData.subItems);
       setTimeout(() => {
         context.setLoading(false);
-      }, 150);
+      }, 600);
     } else {
       navigate("/");
     }

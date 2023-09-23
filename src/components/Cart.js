@@ -1,6 +1,6 @@
 import React, { Fragment, useContext, useEffect, useState } from "react";
 import { FoodContext } from "../App";
-import { Button, CircularProgress } from "@mui/material";
+import {  CircularProgress } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
@@ -16,7 +16,7 @@ function Cart() {
       setProducts(context.cart);
       setTimeout(() => {
         context.setLoading(false);
-      }, 150);
+      }, 600);
     } else {
       navigate("/");
     }

@@ -14,7 +14,7 @@ function Pizza() {
     context.setLoading(true);
     if(context.data.length > 0){
        setProducts(context.data[0].subItemsData.subItems);
-       setTimeout(()=>{context.setLoading(false);},150)
+       setTimeout(()=>{context.setLoading(false);},600)
        
     }
     else{

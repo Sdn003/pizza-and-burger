@@ -25,13 +25,14 @@ const getData = () => {
   setData(() => [...food]);
   setTimeout(() => {
     setLoading(false);
-  }, 400); 
+  }, 600); 
 }
 useEffect(getData, []);
 
 const styleForLoader = {
   width : "100%",
   height: "100vh",
+  color : "#cc201b",
   marginTop: "20%",
   display : "grid",
   justifyContent : "center",
