@@ -14,8 +14,9 @@ video{
     left:0;
     z-index: -1000;
     object-fit: cover;
-    background-image: linear-gradient(to right top, #efa11a, #eb8c11, #e6770d, #e0610f, #d84914, #d2372f, #c62b41, #b6254f, #983865, #76456a, #594a60, #4a4a4a);
+    background-image: linear-gradient(to left bottom, #7c7676, #957373, #ac6f6e, #c16968, #d56361, #df665b, #e86953, #f06e4a, #f07d44, #ed8c40, #ea9b3f, #e5a941);
 }
+
 
 .text_container{
     position: absolute;

@@ -1,19 +1,18 @@
-import React,{ Fragment, useContext } from 'react';
-import { FoodContext } from '../../App';
-import { Link, useNavigate } from 'react-router-dom';
-import pizzaVideo from '../videos/Pizza - Promo Video.mp4';
-import './Home.css';
-import InfiniteSwiper from '../Swiper/Swiper';
-import about_us_image from '../../components/images/about_us.jpg';
-import about_us_bg from '../../components/images/about_us_bg.jpeg';
+import React, { Fragment, useContext } from "react";
+import { FoodContext } from "../../App";
+import { useNavigate } from "react-router-dom";
+import pizzaVideo from "../videos/Pizza - Promo Video.mp4";
+import "./Home.css";
+import InfiniteSwiper from "../Swiper/Swiper";
+import about_us_image from "../../components/images/about_us.jpg";
+import about_us_bg from "../../components/images/about_us_bg.jpeg";
 
-import icon_1 from '../../components/images/icon_images/pic_1.jpg'
-import icon_2 from '../../components/images/icon_images/pic-2.jpg'
-import icon_3 from '../../components/images/icon_images/pic-3.jpg'
-import icon_4 from '../../components/images/icon_images/pic-4.jpg'
+import icon_1 from "../../components/images/icon_images/pic_1.jpg";
+import icon_2 from "../../components/images/icon_images/pic-2.jpg";
+import icon_3 from "../../components/images/icon_images/pic-3.jpg";
+import icon_4 from "../../components/images/icon_images/pic-4.jpg";
 
 function Home() {
-
   const context = useContext(FoodContext);
   const navigate = useNavigate();
 
@@ -102,4 +101,4 @@ function Home() {
   );
 }
 
-export default Home
+export default Home;

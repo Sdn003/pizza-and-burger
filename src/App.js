@@ -9,6 +9,7 @@ import food from './Local-JSON/data.json';
 import { CircularProgress } from "@mui/material";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
+import ErrorBoundary from "./ErrorBoundary.js";
 export const FoodContext = React.createContext();
 
 
@@ -40,7 +41,7 @@ const styleForLoader = {
 
 
   return (
-    <div className="app_container" >
+    <div className="app_container">
       {loading ? (
         <div id="Loader" style={styleForLoader}>
           <CircularProgress color="secondary" size="5rem" />
@@ -57,17 +58,48 @@ const styleForLoader = {
             setCartValue,
             styleForLoader,
             loading,
-            setLoading
+            setLoading,
           }}
         >
-          <Header></Header>
+          <ErrorBoundary>
+            <Header />
+          </ErrorBoundary>
+
           <Routes>
-            <Route path="/Pizza" element={<Pizza />}></Route>
-            <Route path="/Burger" element={<Burger />} />
-            <Route path="/Cart" element={<Cart />}></Route>
-            <Route path="/" element={<Home />} />
+            <Route
+              path="/Pizza"
+              element={
+                <ErrorBoundary>
+                  <Pizza />
+                </ErrorBoundary>
+              }
+            ></Route>
+            <Route
+              path="/Burger"
+              element={
+                <ErrorBoundary>
+                  <Burger />
+                </ErrorBoundary>
+              }
+            />
+            <Route
+              path="/Cart"
+              element={
+                <ErrorBoundary>
+                  <Cart />
+                </ErrorBoundary>
+              }
+            ></Route>
+            <Route
+              path="/"
+              element={
+                <ErrorBoundary>
+                  <Home />
+                </ErrorBoundary>
+              }
+            />
           </Routes>
-          <Footer/>
+          <Footer />
         </FoodContext.Provider>
       </Router>
     </div>
