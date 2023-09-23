@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.feea4c9c.css",
+    "main.js": "/static/js/main.f0b3cef9.js",
+    "static/media/Pizza - Promo Video.mp4": "/static/media/Pizza - Promo Video.6a9684e954b12559e9ff.mp4",
+    "static/media/food_app_logo.png": "/static/media/food_app_logo.574d9ce4d9d642d54367.png",
+    "static/media/offer_6.jpg": "/static/media/offer_6.bc7123eabc10d3fc0ae7.jpg",
+    "static/media/offer_7.jpg": "/static/media/offer_7.ab72a9b44cbddd199a74.jpg",
+    "static/media/offer_4.jpg": "/static/media/offer_4.69b1327ad5974835959d.jpg",
+    "static/media/offer_3.jpg": "/static/media/offer_3.be18c2c7ad362378ecc6.jpg",
+    "static/media/offer_5.jpg": "/static/media/offer_5.58741074f417242f5ca6.jpg",
+    "static/media/about_us_bg.jpeg": "/static/media/about_us_bg.16974b5ca24b1167728c.jpeg",
+    "static/media/about_us.jpg": "/static/media/about_us.3eb9f2fb12a5704c18ce.jpg",
+    "static/media/offer_2.jpg": "/static/media/offer_2.bccc853541f6b53b629a.jpg",
+    "static/media/offer_1.jpg": "/static/media/offer_1.d1dab29ebfb067f93aca.jpg",
+    "index.html": "/index.html",
+    "main.feea4c9c.css.map": "/static/css/main.feea4c9c.css.map",
+    "main.f0b3cef9.js.map": "/static/js/main.f0b3cef9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.feea4c9c.css",
+    "static/js/main.f0b3cef9.js"
+  ]
+}

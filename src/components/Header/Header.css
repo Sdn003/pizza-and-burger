@@ -1,0 +1,241 @@
+:root{
+    --primary : #cc201b;
+    --secondary : #EFA11A;
+}
+
+header{
+    height:55px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top:0;
+    transition: all 0.5s ease;
+    z-index: 1000;
+}
+
+.head{
+     background-color: transparent;
+}
+
+hr{
+    border: 1px solid transparent;
+}
+
+.extra_space{
+    padding-top: 120px;
+}
+
+
+.sticky{
+    position: fixed;
+    background-color: #fdfdfd;
+    box-shadow: 0px 2px 5px 0.24px grey;
+    z-index: 1000;
+    right: 0; 
+    top: 0;
+    animation: slide 0.3s ease-out;
+}
+
+.sticky > .brand_and_logo > h4{
+    font-size: 1.8rem;
+    margin-top: 0;
+}
+
+.sticky >.brand_and_logo > img{
+    height : 80%;
+    width: 40px;
+    margin-top: 0;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateY(-55px);
+  }
+  50%{
+    transform: translateY(-28px);
+  }
+   100% {
+    transform: translateY(0px);
+  }
+}
+
+.menu_icon{
+    margin-left : 0.8rem;
+    display: none;
+}
+
+.brand_and_logo{
+    flex-grow:3;
+    margin : 0 1rem 0 1rem;
+    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 8px 0 8px;
+}
+
+.brand_and_logo > img{
+    height : 90%;
+    width: 40px;
+    border-radius: 8px;
+    margin-right : 0.2rem;
+    margin-top:0.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.brand_and_logo > h4{
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.4rem;
+    font-weight: 1000;
+    text-transform: uppercase;
+    color: #cc201b;
+    letter-spacing: 2px;
+    margin-top:0.5rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.nav_list{
+    flex-grow:1
+}
+
+.nav_list > ul{
+    display: flex;
+    align-items: center;
+}
+
+.nav_list > ul > li{
+    margin-left:2.5rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    font-weight: 600;
+    font-family: 'Oswald', sans-serif;
+    font-stretch: expanded;
+    transition: all 0.2s ease;
+    color :  var(--primary)
+}
+
+.nav_list > ul > li:hover{
+    border-bottom:1px solid var(--secondary);
+    translate : 0px -4px;
+    color: #cc201b;
+    
+}
+
+@media screen and (max-width:700px) {
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .brand_and_logo{
+        flex-grow: 0;
+    }
+    .menu_icon{
+    display: block;
+}
+
+    .nav_list.show_navBar{
+        left:0;
+    }
+
+   .nav_list{
+    width: 180px;
+    position: absolute;
+    top: 120%;
+    left:-150%;
+    z-index: 10000;
+    background-color: #efa11ae4;
+    display: flex;
+    padding: 20px 55px;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+   } 
+
+   .nav_list > ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   }
+
+ 
+   .nav_list > ul > li{
+    margin-left:0;
+    width: 100%;
+    padding: 1.2rem 0rem 0.3rem 0rem;
+    text-align: center;
+    font-size: 1.1rem;
+    position: relative;
+   }
+   .nav_list > ul > li:hover{
+    color: var(--primary);
+}
+
+}
+
+
+.cart{
+    margin-right : 1rem;
+}
+
+
+.cartIcon{
+    font-size: xx-large !important;
+    color: #EFA11A;
+    transition: all 0.2s ease;
+}
+
+.cartIcon:focus{
+    color:#cc201b !important;
+}
+
+.burger_icon{
+    font-size: xx-large !important ; 
+    color: #EFA11A;
+}
+.burger_icon:focus{
+    color:#cc201b !important;
+}
+
+.count_of_ordered_items{
+    position: absolute;
+    height: 1.2rem;
+    width: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    top:4px;
+    right:1.1rem;
+    background-color: var(--primary);
+    z-index: 10000;
+}
+
+@media screen and (max-width:280px) {
+    .menu_icon{
+        margin-left: 0 !important;
+    }
+    .brand_and_logo {
+        margin: 4px !important;
+    }
+    .count_of_ordered_items{
+        margin: 2px !important;
+         top:4px;
+        right:14px;
+    }
+   
+}
+
+.count_of_ordered_items > span{
+    font-size: 0.9rem;
+    color: white;
+    font-weight: bold;
+}
+
+
+
+
