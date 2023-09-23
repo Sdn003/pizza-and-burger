@@ -40,11 +40,12 @@ function Header() {
  const header_ref = useRef();
  const myFunction = () => {
   //
-   if (window.scrollY > hr_ref.current.offsetTop) {
-     header_ref.current.classList.add("sticky");
-   } else {
-     header_ref.current.classList.remove("sticky");
-   }
+    if (window.scrollY > hr_ref.current.offsetTop) {
+      header_ref.current.classList.add("sticky");
+    } else {
+      header_ref.current.classList.remove("sticky");
+    }
+    
  };
 
  useEffect(() => {

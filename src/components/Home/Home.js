@@ -1,4 +1,4 @@
-import React, { Fragment, useContext } from "react";
+import React, { Fragment, useContext, useRef } from "react";
 import { FoodContext } from "../../App";
 import { Link, useNavigate } from "react-router-dom";
 import pizzaVideo from "../videos/Pizza - Promo Video.mp4";
@@ -18,6 +18,12 @@ function Home() {
   const context = useContext(FoodContext);
   const navigate = useNavigate();
 
+  const card_ref = useRef();
+  
+  const goToCards = () => {
+    card_ref.current.scrollIntoView({ behavior: "smooth" });
+  }
+
   return (
     <>
       <div className="video_container">
@@ -30,7 +36,7 @@ function Home() {
           <button onClick={() => navigate("/Pizza")}>order online</button>
           <div className="arrow_down_cover">
             <IconButton>
-                <DoubleArrowIcon className="arrow_down_cover_btn" />
+              <DoubleArrowIcon className="arrow_down_cover_btn" onClick={goToCards} />
             </IconButton>
           </div>
         </div>
@@ -39,7 +45,7 @@ function Home() {
         <InfiniteSwiper />
       </section>
 
-      <section className="card">
+      <section className="card" ref={card_ref}>
         <div className="card__container">
           {context.data.map((data, i) => {
             let imageUrl = data.image;
