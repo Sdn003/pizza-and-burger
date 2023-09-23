@@ -62,20 +62,6 @@ function Header() {
    
   return (
     <>
-      {/* <div className="head-wrapper">
-        <div className="head-title">Food Ordering App</div>
-
-        <div className="head-cart">
-          <Link to="/Cart" style={{ textDecoration: "none" }}>
-            <div className="child">
-              <p>
-                <ShoppingCartIcon />
-              </p>
-              <p className="count">{context.cartValue}</p>
-            </div>
-          </Link>
-        </div>
-      </div> */}
 
       <header ref={header_ref} className="head">
         <div className="menu_icon">
@@ -112,14 +98,30 @@ function Header() {
 
         <div className="nav_list" ref={nav_list_ref}>
           <ul>
-            <li onClick={() => navigate("/")}>Home</li>
-            <li onClick={() => navigate("/Pizza")}>Pizza</li>
-            <li onClick={() => navigate("/Burger")}>Burger</li>
+            <li onClick={() => {
+              closeSideBar();
+              navigate("/");
+              
+              }}>Home</li>
+            <li onClick={() => {
+              closeSideBar();
+              navigate("/Pizza")
+              }}>Pizza</li>
+            <li onClick={() => {
+              closeSideBar();
+              navigate("/Burger")
+            }}>Burger</li>
           </ul>
         </div>
 
         <div className="cart">
-          <IconButton className="cartIcon" onClick={() => navigate("/Cart")}>
+          <IconButton className="cartIcon" onClick={() => {
+            try {
+              navigate("/Cart")
+            } catch (error) {
+              navigate("/");
+            }
+            }}>
             <ShoppingCartIcon className="cartIcon" />
           </IconButton>
           {context.cartValue ? (
