@@ -62,6 +62,19 @@ video{
     cursor:pointer
 }
 
+.arrow_down_cover{
+    transform: rotate(90deg) !important;
+    height: 30px;
+    width: 100px;
+    margin-top:50px;
+    margin-left: 65px;
+}
+
+.arrow_down_cover_btn{
+    font-size: xxx-large !important;
+    color: var(--primary) !important;
+}
+
 @media screen and (max-width: 1100px) {
     .text_container{
     top:30%;

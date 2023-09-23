@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.8953ba0a.css",
-    "main.js": "/static/js/main.338658d9.js",
+    "main.css": "/static/css/main.f88418ae.css",
+    "main.js": "/static/js/main.1c7aa866.js",
     "static/media/Pizza - Promo Video.mp4": "/static/media/Pizza - Promo Video.6a9684e954b12559e9ff.mp4",
     "static/media/food_app_logo.png": "/static/media/food_app_logo.574d9ce4d9d642d54367.png",
     "static/media/offer_6.jpg": "/static/media/offer_6.bc7123eabc10d3fc0ae7.jpg",
@@ -14,11 +14,11 @@
     "static/media/offer_2.jpg": "/static/media/offer_2.bccc853541f6b53b629a.jpg",
     "static/media/offer_1.jpg": "/static/media/offer_1.d1dab29ebfb067f93aca.jpg",
     "index.html": "/index.html",
-    "main.8953ba0a.css.map": "/static/css/main.8953ba0a.css.map",
-    "main.338658d9.js.map": "/static/js/main.338658d9.js.map"
+    "main.f88418ae.css.map": "/static/css/main.f88418ae.css.map",
+    "main.1c7aa866.js.map": "/static/js/main.1c7aa866.js.map"
   },
   "entrypoints": [
-    "static/css/main.8953ba0a.css",
-    "static/js/main.338658d9.js"
+    "static/css/main.f88418ae.css",
+    "static/js/main.1c7aa866.js"
   ]
 }
