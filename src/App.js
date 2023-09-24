@@ -67,6 +67,14 @@ const styleForLoader = {
 
           <Routes>
             <Route
+              path="/"
+              element={
+                <ErrorBoundary>
+                  <Home />
+                </ErrorBoundary>
+              }
+            />
+            <Route
               path="/Pizza"
               element={
                 <ErrorBoundary>
@@ -90,14 +98,6 @@ const styleForLoader = {
                 </ErrorBoundary>
               }
             ></Route>
-            <Route
-              path="/"
-              element={
-                <ErrorBoundary>
-                  <Home />
-                </ErrorBoundary>
-              }
-            />
           </Routes>
           <Footer />
         </FoodContext.Provider>

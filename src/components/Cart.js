@@ -11,15 +11,21 @@ function Cart() {
   let [cartPrice] = useState(0);
 
   let getData = () => {
-    context.setLoading(true);
-    if (context.data.length > 0) {
-      setProducts(context.cart);
-      setTimeout(() => {
-        context.setLoading(false);
-      }, 600);
-    } else {
+      context.setLoading(true);
+    try {
+    
+          if (context.data.length > 0) {
+            setProducts(context.cart);
+            context.setLoading(false);
+          } else {
+            navigate("/");
+          }
+    } catch (error) {
+      context.setLoading(false);
       navigate("/");
+      
     }
+
   };
   useEffect(() => {
     getData();

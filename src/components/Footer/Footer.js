@@ -1,6 +1,5 @@
 import React from 'react';
 import './Footer.css';
-import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
 import { IconButton } from '@mui/material';
 
 function Footer() {

@@ -12,14 +12,21 @@ function Pizza() {
 
   let getData = () => {
     context.setLoading(true);
-    if(context.data.length > 0){
-       setProducts(context.data[0].subItemsData.subItems);
-       setTimeout(()=>{context.setLoading(false);},600)
-       
+    try {
+          
+    if (context.data.length > 0) {
+      setProducts(context.data[0].subItemsData.subItems);
+      context.setLoading(false);
+    } else {
+      context.setLoading(false);
+      navigate("/");
     }
-    else{
-      navigate('/');
+      
+    } catch (error) {
+       context.setLoading(false);
+       navigate("/");
     }
+
   }
   useEffect( ()=>{
     getData();

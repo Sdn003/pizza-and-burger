@@ -10,15 +10,21 @@ function Burger() {
   const navigate = useNavigate();
 
   let getData = () => {
-    context.setLoading(true);
-    if (context.data.length > 0) {
-      setProducts(context.data[1].subItemsData.subItems);
-      setTimeout(() => {
-        context.setLoading(false);
-      }, 600);
-    } else {
+     context.setLoading(true);
+    try {
+          if (context.data.length > 0) {
+            setProducts(context.data[1].subItemsData.subItems);
+            context.setLoading(false);
+          } else {
+             context.setLoading(false);
+            navigate("/");
+          }
+    } catch (error) {
+      context.setLoading(false);
       navigate("/");
     }
+   
+
   };
   useEffect(() => {
     getData();
